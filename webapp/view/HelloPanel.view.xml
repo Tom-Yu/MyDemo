@@ -1,0 +1,18 @@
+<mvc:View 
+    controllerName="MyDemo.controller.HelloPanel"
+    xmlns="sap.m" 
+    xmlns:mvc="sap.ui.core.mvc">
+        <Panel
+            headerText="{i18n>helloPanelTitle}">
+            <content>
+                <Button text="{i18n>openDialogButtonText}" press="onOpenDialog" class="sapUiSmallMarginEnd"/>
+				<Button text="Say Hello" press="onShowHello" class="myCustomButton"/>
+				<Input value="{/recipient/name}"
+                    valueLiveUpdate="true"
+                    width="60%"/>
+                <Text
+					text="Hello {/recipient/name}"
+				    class="sapUiSmallMargin myCustomText"/>
+            </content>
+        </Panel>
+</mvc:View>
